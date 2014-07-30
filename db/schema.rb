@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727000453) do
+ActiveRecord::Schema.define(version: 20140729160950) do
 
   create_table "albums", force: true do |t|
     t.string   "title",       limit: 50
@@ -21,5 +21,15 @@ ActiveRecord::Schema.define(version: 20140727000453) do
     t.boolean  "public"
     t.integer  "rating"
   end
+
+  create_table "photos", force: true do |t|
+    t.string   "title"
+    t.string   "file"
+    t.integer  "album_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "photos", ["album_id"], name: "index_photos_on_album_id"
 
 end
