@@ -1,6 +1,7 @@
 Galleror::Application.routes.draw do
-  resources :photos
-  resources :albums
+  resources :albums do
+    resources :photos
+  end
 
   root 'albums#index'
   # The priority is based upon order of creation: first created -> highest priority.
