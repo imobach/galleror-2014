@@ -1,6 +1,7 @@
 <li>
   <%= link_to image_tag(photo.file.url(:thumb)), photo.file.url %>
   <%= photo.title %>
+  <%= link_to 'Show', album_photo_path(photo.album, photo) %> |
   <%= link_to 'Edit', edit_album_photo_path(photo.album, photo) %> |
   <%= link_to 'Destroy', [photo.album, photo], method: :delete, confirm: 'Are you sure?' %>
 </li>

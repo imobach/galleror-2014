@@ -45,3 +45,4 @@ gem 'pry-rails'
 gem 'pry-byebug', group: [:development, :test]
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'devise'
