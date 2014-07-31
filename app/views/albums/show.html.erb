@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>User:</strong>
+  <%= @album.user.try(:email) %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @album.description %>
 </p>

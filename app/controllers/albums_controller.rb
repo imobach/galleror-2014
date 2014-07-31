@@ -27,7 +27,7 @@ class AlbumsController < ApplicationController
   # POST /albums
   # POST /albums.json
   def create
-    @album = Album.create(album_params)
+    @album = Album.create(album_params.merge(user_id: current_user.id))
     respond_with(@album, location: albums_url)
   end
 

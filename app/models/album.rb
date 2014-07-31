@@ -1,5 +1,6 @@
 class Album < ActiveRecord::Base
   has_many :photos
+  belongs_to :user
 
   validates :title, presence: true
   validates :rating, numericality: { only_integer: true, allow_blank: true,
