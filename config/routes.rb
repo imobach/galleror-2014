@@ -2,6 +2,7 @@ Galleror::Application.routes.draw do
   devise_for :users
   resources :albums do
     resources :photos
+    resources :votes, only: [:create, :destroy]
   end
 
   root 'albums#index'
